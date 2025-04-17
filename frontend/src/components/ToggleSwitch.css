@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: clamp(150px, 20vw, 250px);
-    height: clamp(75px, 10vh, 150px);
+    width: clamp(150px, 25vw, 250px);
+    height: clamp(75px, 15vh, 150px);
     border-radius: 999px;
     border: transparent;
 }
