@@ -7,7 +7,9 @@ function App() {
 
   return (
     <>
-      <ToggleSwitch isToggled={isToggled} setIsToggled={setIsToggled} />
+      <div className="main-container">
+        <ToggleSwitch isToggled={isToggled} setIsToggled={setIsToggled} />
+      </div>
     </>
   );
 }
