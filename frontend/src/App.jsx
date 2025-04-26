@@ -3,8 +3,9 @@ import "./App.css";
 import ToggleSwitch from "./components/ToggleSwitch";
 import MenuSelection from "./components/MenuSelection";
 import TopNavBar from "./components/TopNavBar";
-
 import { FaHome, FaUser, FaEnvelope, FaCog, FaSearch } from 'react-icons/fa';
+
+import SearchBar from "./components/SearchBar";
 
 
 
@@ -40,15 +41,22 @@ function App() {
     },])
   const [selectedNavBarOpt, setSelectedNavBarOpt] = useState(navBarOpts[0])
 
+  //Search Bar
+  const [input, setInput] = useState("")
+
+
   return (
     <>
       <div className="main-container">
         <ToggleSwitch isToggled={isToggled} setIsToggled={setIsToggled} />
-        <div className="main-menu-selection-container">
+        <div className="main-component-container">
           <MenuSelection selectedItem={selectedItem} setSelectedItem={setSelectedItem} options={options}/>
         </div>
-        <div className="main-menu-selection-container">
+        <div className="main-component-container">
           <TopNavBar options={navBarOpts} selectedOption={selectedNavBarOpt} setSelectedOption={setSelectedNavBarOpt}/>
+        </div>
+        <div className="main-component-container">
+          <SearchBar input={input} setInput={setInput} />
         </div>
       </div>
     </>

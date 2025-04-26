@@ -11,7 +11,7 @@ const TopNavBar = ({options, selectedOption, setSelectedOption}) => {
 		if(index !== -1 && itemRefs.current[index]){
 			const el = itemRefs.current[index];
 			setBarLeft(`${el.offsetLeft}px`);
-      setBarWidth(`${el.offsetWidth}px`);
+			setBarWidth(`${el.offsetWidth}px`);
 		}
 	},  [selectedOption, options])
 
@@ -33,7 +33,7 @@ const TopNavBar = ({options, selectedOption, setSelectedOption}) => {
 					<div className="nav-bar-item-selected-bar"/>
 			</div>
 		</div>
-  )
+  	)
 }
 
 export default TopNavBar
